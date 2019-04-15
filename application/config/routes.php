@@ -57,3 +57,4 @@ $route["site/about-info"] = "site/about";
 $route["site/contact"] = "site/contact_info";
 $route["site/product/(:num)"] = "site/product/$1";
 $route["site/service/(:num)/(:any)"] = "site/service/$1/$2";
+$route["site/variable"] = "site/pass_var";

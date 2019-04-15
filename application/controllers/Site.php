@@ -6,11 +6,36 @@ class Site extends CI_Controller {
 
     public function index() {
 
+        $info_array = array(
+            "name" => "Online Web Tutor",
+            "email" => "onlinewebtutorhub@gmail.com",
+            "author" => "Sanjay Kumar"
+        );
+
         //$this->load->view("include/header"); // header section
         //$this->load->view("site/site_index"); // body section
-        //$this->load->view("include/footer"); // footer
+        //$this->load->view("include/footer",$info_array); // footer
+        $this->load->view("home_page", $info_array);
+    }
 
-        $this->load->view("home_page");
+    public function pass_var() {
+
+        /* $info_array = array(
+          "organisation_name" => "Online Web Tutor",
+          "author_name" => "Sanjay Kumar",
+          "email" => "onlinewebtutorhub@gmail.com"
+          ); */
+
+        /* $info_array["organisation_name"] = "Online Web Tutor";
+          $info_array["author_name"] = "Sanjay Kumar";
+          $info_array["email"] = "onlinewebtutorhub@gmail.com"; */
+
+        //$this->load->view("site/pass_variable", $info_array);
+        $this->load->view("site/pass_variable", array(
+            "organisation_name" => "Online Web Tutor",
+            "author_name" => "Sanjay Kumar",
+            "email" => "onlinewebtutorhub@gmail.com"
+        ));
     }
 
     public function about() {
