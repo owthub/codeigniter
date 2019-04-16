@@ -4,12 +4,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Site extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        //$this->load->model("site_model");
+    }
+
     public function index() {
+
+        $message = $this->site_model->run_my_query();
 
         $info_array = array(
             "name" => "Online Web Tutor",
             "email" => "onlinewebtutorhub@gmail.com",
-            "author" => "Sanjay Kumar"
+            "author" => "Sanjay Kumar",
+            "message" => $message
         );
 
         //$this->load->view("include/header"); // header section
