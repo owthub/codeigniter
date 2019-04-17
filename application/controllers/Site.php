@@ -65,4 +65,16 @@ class Site extends CI_Controller {
         echo "<h3>This is our service page</h3><p>ID: " . $id . " AND Service Name: " . $name;
     }
 
+    // insert data into db table
+    function insert_data_into_table() {
+
+        $data = array(
+            "name" => "Sanjay Kumar",
+            "email" => "sanjay@gmail.com",
+            "phone_no" => "132654892"
+        );
+
+        echo $this->site_model->insert_table_data($data);
+    }
+
 }
