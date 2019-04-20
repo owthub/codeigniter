@@ -69,9 +69,9 @@ class Site extends CI_Controller {
     function insert_data_into_table() {
 
         $data = array(
-            "name" => "Sanjay Kumar",
-            "email" => "sanjay@gmail.com",
-            "phone_no" => "132654892"
+            "name" => "Learn CodeIgniter",
+            "email" => "ci@gmail.com",
+            "amount" => "120"
         );
 
         echo $this->site_model->insert_table_data($data);
