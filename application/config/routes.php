@@ -13,3 +13,6 @@ $route["site/service/(:num)/(:any)"] = "site/service/$1/$2";
 $route["site/variable"] = "site/pass_var";
 
 $route["site/insert-data"] = "site/insert_data_into_table";
+
+$route["action/select-all"] = "action/get_all_data";
+$route["action/update-date"] = "action/update_data";
