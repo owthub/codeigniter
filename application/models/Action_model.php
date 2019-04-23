@@ -44,4 +44,25 @@ class Action_model extends CI_Model {
         return True;
     }
 
+    public function get_all_users_data() {
+
+        $this->db->select("*");
+        $this->db->from("users"); // tbl_users
+        $this->db->where("id", 1);
+        $query = $this->db->get();
+        // select * from tbl_users where id = 1
+        //return $result = $query->result_array();
+        return $result = $query->row_array();
+    }
+
+    public function delete_specific_user() {
+
+        //$this->db->where("id",4);
+        //return $this->db->delete("users");
+        // delete from tbl_users where id =4
+        return $this->db->delete("users", array(
+                    "id" => 3
+        ));
+    }
+
 }

@@ -20,5 +20,17 @@ class Action extends CI_Controller {
             echo "<h3>Data has been updated</h3>";
         }
     }
+    
+    public function get_users(){
+        
+        $data = $this->action_model->get_all_users_data();
+        echo "<pre>";
+        print_r($data);
+    }
+    
+    public function delete_single_user(){
+        
+        echo $this->action_model->delete_specific_user();
+    }
 
 }
