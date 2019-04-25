@@ -18,3 +18,4 @@ $route["action/select-all"] = "action/get_all_data";
 $route["action/update-date"] = "action/update_data";
 $route["action/all-users"] = "action/get_users";
 $route["action/delete-single"] = "action/delete_single_user";
+$route["action/salary-filter"] = "action/condition";

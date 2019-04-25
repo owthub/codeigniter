@@ -65,4 +65,50 @@ class Action_model extends CI_Model {
         ));
     }
 
+    public function get_where_condition_query() {
+
+        $this->db->select("*");
+        $this->db->from("users"); // tbl_users
+        $this->db->where("salary >=", 4500);
+        /*
+         *  $this->db->where("salary >=",4500); -> greater than equal to
+         *  $this->db->where("salary <=",4500); -> less than equal to
+         *  $this->db->where("salary =",4500); ->  equal to
+         *  $this->db->where("salary !=",4500); ->  not equal to
+         *  $this->db->where("salary >",4500); ->  not equal to
+         *  $this->db->where("salary <",4500); ->  not equal to
+         * 
+         */
+        $query = $this->db->get();
+        // select * from tbl_users where salary >= 4500
+        return $result = $query->result();
+    }
+
+    public function get_and_condition() {
+
+        $this->db->select("*");
+        $this->db->from("users");
+        /* $this->db->where(array(
+          "id"=>1,
+          "email"=>"onlinewebtutorhub@gmail.com1",
+          )); */
+        $this->db->where("id", 1);
+        $this->db->or_where("email", 'onlinewebtutorhub@gmail.com1');
+
+        $query = $this->db->get();
+        return $result = $query->result();
+        // select * from tbl_users where id = 1 AND email = 'onlinewebtutorhub@gmail.com'
+        // select * from tbl_users where id = 1 OR email = 'onlinewebtutorhub@gmail.com'
+    }
+
+    public function get_where_in() {
+
+        $this->db->select("*");
+        $this->db->from("tbl_users");
+        //$this->db->where_in("salary", array(4500, 6000, 10000));
+        $this->db->where_in("email", array('onlinewebtutorhub@gmail.com', 'ashish@gmail.com', 'sample@test.com'));
+        $query = $this->db->get();
+        return $result = $query->result();
+    }
+
 }

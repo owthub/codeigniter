@@ -32,5 +32,14 @@ class Action extends CI_Controller {
         
         echo $this->action_model->delete_specific_user();
     }
+    
+    public function condition(){
+        
+        //$data = $this->action_model->get_where_condition_query();
+        //$data = $this->action_model->get_and_condition();
+        $data = $this->action_model->get_where_in();
+        echo "<pre>";
+        print_r($data);
+    }
 
 }
