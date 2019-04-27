@@ -114,4 +114,17 @@ class Action_model extends CI_Model {
         return $result = $query->result();
     }
 
+    public function get_user_messages() {
+
+        // join tbl_users => id, match user_id inside tbl_messages
+        $this->db->select("user.*,message.message");
+        $this->db->from("tbl_users as user");
+        //$this->db->join("tbl_messages as message", "user.id = message.user_id", "left");
+        //$this->db->join("tbl_messages as message", "user.id = message.user_id", "right");
+        $this->db->join("tbl_messages as message", "user.id = message.user_id", "inner");
+        $query = $this->db->get();
+        // select user.*,message.message from tbl_users as user INNER JOIN tbl_messages as message ON user.id = message.user_id
+        return $result = $query->result();
+    }
+
 }

@@ -41,5 +41,12 @@ class Action extends CI_Controller {
         echo "<pre>";
         print_r($data);
     }
+    
+    public function get_messages(){
+        
+        $data = $this->action_model->get_user_messages();
+        echo "<pre>";
+        print_r($data);
+    }
 
 }
