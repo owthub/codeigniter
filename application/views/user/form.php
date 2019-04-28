@@ -1,28 +1,22 @@
-<h3>Form Helper</h3>
+<?php $this->load->view("include/include_form"); ?>
 
-<!--h4>Form without helper</h4>
-<form action="" method="post" class="" id="" enctype="multipart/form-data">
 
-    <input type="text" placeholder="Name"/>
-    <input type="email" placeholder="Email"/>
+<div class="container">
+    <?php
+    echo form_open(site_url('helpers/form-submit'));
+    ?>
+    <div class="form-group">
+        <label for="txt_name">Name:</label>
+        <input type="text" class="form-control" name="txt_name" id="txt_name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="txt_email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="txt_email">
+    </div>
 
-    <button type="submit">Submit</button>
-</form-->
+    <button type="submit" class="btn btn-default">Submit</button>
+    <?php echo form_close(); ?>
+</div>
 
-<h4>With form helper</h4>
-
-<?php
-echo form_open('helpers/form-submit', array(
-    "method" => "post",
-    "class" => "form-class",
-    "id" => "form-id",
-    "enctype" => "multipart/form-data"
-));
-?>
-
-<input type="text" placeholder="Name" name="txt_name"/>
-<input type="email" placeholder="Email" name="txt_email"/>
-
-<button type="submit">Submit</button>
-
-<?php echo form_close(); ?>
+</body>
+</html>
