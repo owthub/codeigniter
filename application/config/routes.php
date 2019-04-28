@@ -20,3 +20,5 @@ $route["action/all-users"] = "action/get_users";
 $route["action/delete-single"] = "action/delete_single_user";
 $route["action/salary-filter"] = "action/condition";
 $route["action/messages"] = "action/get_messages";
+$route["helpers/form"] = "user/form_helper_study";
+$route["helpers/form-submit"] = "user/form_submit_method";
