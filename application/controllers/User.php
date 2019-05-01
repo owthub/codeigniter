@@ -18,9 +18,22 @@ class User extends CI_Controller {
 
     public function form_submit_method() {
 
-        $this->form_validation->set_rules("txt_name", "Name", "required");
-
-        $this->form_validation->set_rules("txt_email", "Email", "required");
+        $config_rules = array(
+            array(
+                "field" => "txt_name",
+                "label" => "Name",
+                "rules" => "required|min_length[6]|max_length[10]|trim"
+            ),
+            array(
+                "field" => "txt_email",
+                "label" => "Email",
+                "rules" => "required|min_length[10]|callback_is_email_exists"
+            )
+        );
+        
+        $this->form_validation->set_rules($config_rules);
+        //$this->form_validation->set_rules("txt_name", "Name", "required|min_length[6]|max_length[10]|trim");
+        //$this->form_validation->set_rules("txt_email", "Email", "required|min_length[10]|callback_is_email_exists");
 
         if ($this->form_validation->run() == FALSE) {
             // we have some errors
@@ -32,6 +45,29 @@ class User extends CI_Controller {
             //$data = $this->input->get();
             echo "<h4>Form data</h4>";
             echo $data["txt_name"] . " , " . $data["txt_email"];
+        }
+    }
+
+    public function is_email_exists($value) {
+
+        $valid_emails = array(
+            "online@gmail.com",
+            "onlinewebtutor@gmail.com",
+            "sanjay@gmail.com"
+        );
+        if (!empty($value)) {
+
+            if (in_array($value, $valid_emails)) {
+
+                $this->form_validation->set_message("is_email_exists", "The {field} already taken, try another email ID");
+                return false;
+            } else {
+
+                return true;
+            }
+        } else {
+            $this->form_validation->set_message("is_email_exists","Email address is needed");
+            return false;
         }
     }
 
