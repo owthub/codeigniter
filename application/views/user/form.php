@@ -9,6 +9,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6" style="margin:0 auto;">
+            <?php
+            if ($this->session->flashdata("success")) {
+                ?>
+                <div class="btn btn-success">
+                    <?php echo $this->session->flashdata("success") ?>
+                </div>
+                <?php
+            }
+            ?>
             <p>
                 <?php
                 //echo validation_errors();
