@@ -13,3 +13,5 @@ $route["remove-session"] = "mysession/remove_session";
 // file upload library routes
 $route["form-upload"] = "myupload/my_upload_form";
 $route["submit-file"] = "myupload/upload_my_files";
+
+//echo date("Ymdhis");
