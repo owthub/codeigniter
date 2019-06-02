@@ -15,3 +15,5 @@ $route["form-upload"] = "myupload/my_upload_form";
 $route["submit-file"] = "myupload/upload_my_files";
 
 //echo date("Ymdhis");
+$route["my-uri"] = "myuri";
+$route["my-segment"] = "myuri/my_segments";
