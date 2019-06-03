@@ -3,7 +3,8 @@
 
       public function __construct(){
           parent::__construct();
-          $this->load->library("user_agent"); // $this->agent->
+          $this->load->library(array("user_agent","myfunctions")); // $this->agent->
+          ///$this->load->library("myfunctions");
       }
 
        public function index(){
@@ -21,5 +22,17 @@
 
            echo $this->uri->segment(5,"No Segment exists");
        }
+
+       function run(){
+
+           echo $this->myfunctions->my_upper_case("online web tutor");
+           echo "<br/><br/>";
+           echo $this->myfunctions->remove_space("online web tutor");
+
+
+       }
+
+
+
    }
  ?>
