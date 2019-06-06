@@ -25,11 +25,15 @@
 
        function run(){
 
-           echo $this->myfunctions->my_upper_case("online web tutor");
-           echo "<br/><br/>";
-           echo $this->myfunctions->remove_space("online web tutor");
+           //echo $this->myfunctions->my_upper_case("online web tutor");
+           //echo "<br/><br/>";
+           //echo $this->myfunctions->remove_space("online web tutor");
 
-
+echo $this->myfunctions->my_base_url();
+//$this->myfunctions->my_session_store("email","acbd@gmail.com");
+//echo "<br/>";
+//echo $this->myfunctions->my_session_get("email");
+print_r($this->myfunctions->my_all_session_data());
        }
 
 
