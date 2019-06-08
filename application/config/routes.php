@@ -18,3 +18,6 @@ $route["submit-file"] = "myupload/upload_my_files";
 $route["my-uri"] = "myuri";
 $route["my-segment"] = "myuri/my_segments";
 $route["custom-library"] = "myuri/run";
+
+$route["my-input-form"] = "myuri/my_html";
+$route["submit-form-data"] = "myuri/submit_form_data";

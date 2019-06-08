@@ -36,6 +36,23 @@ echo $this->myfunctions->my_base_url();
 print_r($this->myfunctions->my_all_session_data());
        }
 
+       public function my_html(){
+
+          $this->load->view("input_html");
+       }
+
+       public function submit_form_data(){
+
+          // $this->load->library(library_name)
+
+          //$data = $this->input->post();
+          //print_r($data);
+          echo $this->input->post("txt_name");
+          echo '<br/>';
+          echo $this->input->post("txt_email");
+
+       }
+
 
 
    }
