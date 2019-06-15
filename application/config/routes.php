@@ -23,4 +23,6 @@ $route["my-input-form"] = "myuri/my_html";
 $route["submit-form-data"] = "myuri/submit_form_data";
 
 // helpers
-$route["learn-helpers"] = "learnhelpers/helper_class";
+//$route["learn-helpers"] = "learnhelpers/helper_class";
+
+$route["learn-helpers"] = "learnhelpers/string_helper";
