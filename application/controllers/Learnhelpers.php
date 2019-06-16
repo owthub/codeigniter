@@ -50,4 +50,25 @@
         echo random_element($info_array);
      }
 
+     public function learn_captcha(){
+
+        $this->load->helper("captcha");
+
+        $config = array(
+            'img_path'      => 'captcha_images/',
+            'img_url'       => base_url().'captcha_images/',
+            'font_path'     => 'system/fonts/texb.ttf',
+            'img_width'     => '260',
+            'img_height'    => 150,
+            'word_length'   => 12,
+            'font_size'     => 22
+        );
+
+        $captcha = create_captcha($config);
+
+        $data["cap_image"] = $captcha['image'];
+
+        $this->load->view("show_captcha",$data);
+     }
+
    }

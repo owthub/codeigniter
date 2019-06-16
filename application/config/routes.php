@@ -25,4 +25,4 @@ $route["submit-form-data"] = "myuri/submit_form_data";
 // helpers
 //$route["learn-helpers"] = "learnhelpers/helper_class";
 
-$route["learn-helpers"] = "learnhelpers/string_helper";
+$route["learn-helpers"] = "learnhelpers/learn_captcha";
