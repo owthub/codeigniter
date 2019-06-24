@@ -3,8 +3,13 @@
 
      public function __construct(){
          parent::__construct();
-         $this->load->helper(array('array','string'));
+         $this->load->helper(array('array','string','form'));
          //$this->load->helper("string");
+     }
+
+     public function my_form(){
+
+         $this->load->view("myform");
      }
 
      public function string_helper(){

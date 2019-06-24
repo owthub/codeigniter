@@ -26,3 +26,5 @@ $route["submit-form-data"] = "myuri/submit_form_data";
 //$route["learn-helpers"] = "learnhelpers/helper_class";
 
 $route["learn-helpers"] = "learnhelpers/learn_captcha";
+
+$route["my-form"] = "learnhelpers/my_form";
