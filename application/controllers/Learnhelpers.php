@@ -110,4 +110,33 @@
           }
      }
 
+     function my_file_helper(){
+
+       $this->load->helper("file");
+
+       $file_path = "./files/";
+
+
+
+       //echo delete_files($file_path);
+       //$all_files = get_filenames("./application/config");
+       //$all_files = get_dir_file_info("./application/config");
+       $all_files = get_file_info("./application/config/config.php");
+       echo "<pre>";
+       print_r($all_files);
+
+       // read file
+       //$file_contents = read_file($file_path);
+       //$file_contents = file_get_contents($file_path);
+
+       //print_r($file_contents);
+       //$updated_content = "Hey, This is all about codeigniter tutorial";
+       //$write_status = write_file($file_path,$updated_content);
+
+        //echo $write_status;
+
+
+
+     }
+
    }

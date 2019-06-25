@@ -31,3 +31,5 @@ $route["my-form"] = "learnhelpers/my_form";
 
 $route["my-captcha"] = "learnhelpers/my_captcha_form";
 $route["my_captcha_submit"] = "learnhelpers/my_captcha_form_submit";
+
+$route["my-file"] = "learnhelpers/my_file_helper";
