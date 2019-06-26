@@ -8,6 +8,25 @@
          //$this->load->helper("string");
      }
 
+     public function my_working_directory(){
+
+       //$this->load->helper("directory");
+       $this->load->helper("download");
+
+       //$download_path = "./files/sample.txt";
+       $file_name = "welcome.txt";
+       $data = "Welcome to Online Web Tutor";
+
+       //force_download($download_path,null);
+       force_download($file_name,$data);
+
+       /*$directory_path = "./application/";
+
+       $all_dirs = directory_map($directory_path,FALSE,TRUE);
+       echo "<pre>";
+       print_r($all_dirs);*/
+     }
+
      public function my_form(){
 
          $this->load->view("myform");
@@ -115,8 +134,6 @@
        $this->load->helper("file");
 
        $file_path = "./files/";
-
-
 
        //echo delete_files($file_path);
        //$all_files = get_filenames("./application/config");
