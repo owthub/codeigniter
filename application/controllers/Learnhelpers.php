@@ -8,6 +8,27 @@
          //$this->load->helper("string");
      }
 
+     public function my_call_inflector(){
+
+       $this->load->helper("inflector");
+
+       //$plural_word = "copies";
+       //echo singular($plural_word);
+
+       //$singluar_word = "copy";
+       //echo plural($singluar_word);
+
+       //$string = "online_web_tutor"; // onlineWebTutor
+      // echo camelize($string);
+
+      //$string = "Online Web Tutor"; // Online_Web_Tutor
+      //echo underscore($string);
+
+      $string = "online-web-tutor"; // online-web Tutor
+      echo humanize($string,"-");
+
+     }
+
      public function my_working_directory(){
 
        //$this->load->helper("directory");
