@@ -39,3 +39,5 @@ $route["my-directory"] = "learnhelpers/my_working_directory";
 $route["my-inflector"] = "learnhelpers/my_call_inflector";
 
 $route["my-face"] = "learnhelpers/my_face_helper";
+
+$route["my-custom-helper"] = "learnhelpers/my_use_helper";

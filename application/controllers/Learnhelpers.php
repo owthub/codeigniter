@@ -5,7 +5,19 @@
          parent::__construct();
          $this->load->helper(array('array','string','form'));
          $this->load->library("session");
+
          //$this->load->helper("string");
+     }
+
+     public function my_use_helper(){
+
+          $this->load->helper("app");
+
+          //echo get_string_length("online web tutor");
+          //echo "<br/>";
+          //echo convert_to_uppercase("sanjay kumar");
+
+          $this->load->view("my-helper");
      }
 
      public function my_face_helper(){
